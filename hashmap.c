@@ -56,9 +56,14 @@ void insertMap(HashMap * map, char * key, void * value) {
         if(is_equal(map->buckets[posi]->key,key)){
             return;
         }
+        posi = (posi + 1) % map->capacity;
 
     }
-
+    Pair * newPair = createPair(key,value);
+    map->buckets[posi] = newPair;
+    map->current = posi;
+    map->size++;
+    
 
 }
 
