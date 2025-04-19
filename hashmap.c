@@ -51,7 +51,10 @@ HashMap * createMap(long capacity) {
 }
 
 void insertMap(HashMap * map, char * key, void * value) {
-
+    long posi = hash(key,map->capacity);
+    if(map->buckets[posi] == NULL || map->buckets[posi]->key == -1){
+        
+    }
 
 }
 
