@@ -52,11 +52,15 @@ HashMap * createMap(long capacity) {
 
 void insertMap(HashMap * map, char * key, void * value) {
     long posi = hash(key,map->capacity);
+    long comprobar = posi;
     while(map->buckets[posi] != NULL && map->buckets[posi]->key != NULL){
         if(is_equal(map->buckets[posi]->key,key)){
             return;
         }
         posi = (posi + 1) % map->capacity;
+        if(posi == comprobar){
+            return;
+        }
 
     }
     Pair * newPair = createPair(key,value);
