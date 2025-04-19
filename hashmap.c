@@ -70,6 +70,14 @@ void insertMap(HashMap * map, char * key, void * value) {
     
 
 }
+Pair * searchMap(HashMap * map,  char * key) {   
+    long posi = hash(key,map->capacity);
+    if(map->buckets[posi]->key != key){
+        posi = (posi + 1) % map->capacity;
+    }
+
+    return posi;
+}
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
@@ -88,11 +96,11 @@ void eraseMap(HashMap * map,  char * key) {
 
 }
 
-Pair * searchMap(HashMap * map,  char * key) {   
+/*Pair * searchMap(HashMap * map,  char * key) {   
 
 
     return NULL;
-}
+}*/
 
 Pair * firstMap(HashMap * map) {
 
