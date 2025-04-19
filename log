@@ -535,3 +535,9 @@ hashmap.c:107:43: error: expected expression before ')' token
      while((map->current < map->capacity &&)
                                            ^
 7ad7d03
+Fri, Apr 18, 2025 10:30:12 PM: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  13|2
+total_score: 50/70
+91c71f8
