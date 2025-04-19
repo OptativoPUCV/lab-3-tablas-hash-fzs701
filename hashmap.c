@@ -118,8 +118,17 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-
-    return NULL;
+    map->current = 0;
+    while((map->current < map->capacity) &&
+         (map->buckets[map->current] == NULL || map->buckets[map->current]->key == NULL)){
+            map->current++;
+    }
+    
+    if(map->current < map->capacity){
+        return map->buckets[map->current];
+    } else {
+        return NULL;
+    }
 }
 
 void enlarge(HashMap * map) {
