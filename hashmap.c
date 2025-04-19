@@ -75,9 +75,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     long comprobar = posi;
     if(map->buckets[posi]->key != NULL){
         posi = (posi + 1) % map->capacity;
-        if(posi == comprobar){
-            break;
-        }
+        
     }
 
     return NULL;

@@ -204,3 +204,14 @@ hashmap.c:79:13: error: break statement not within loop or switch
              break;
              ^~~~~
 ecc634c
+Fri, Apr 18, 2025  9:47:51 PM: 
+ hashmap.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'searchMap':
+hashmap.c:75:10: error: unused variable 'comprobar' [-Werror=unused-variable]
+     long comprobar = posi;
+          ^~~~~~~~~
+cc1.exe: all warnings being treated as errors
+c3636be
