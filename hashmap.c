@@ -123,7 +123,7 @@ Pair * firstMap(HashMap * map) {
     
 }
 
-/*Pair * nextMap(HashMap * map) {
+Pair * nextMap(HashMap * map) {
     long primer = map->current + 1;
 
     while(primer < map->capacity){
@@ -135,21 +135,9 @@ Pair * firstMap(HashMap * map) {
     }
     
     return NULL;
-}*/
-
-Pair * nextMap(HashMap * map) {
-    long posi = (map->current + 1) % map->capacity;
-    long comprobar = posi;
-
-    while(map->buckets[posi] == NULL || map->buckets[posi]->key == NULL){
-        posi = (posi + 1) % map->capacity;
-        if(posi == comprobar) {
-            return NULL;
-        }
-    }
-    map->current = posi;
-    return map->buckets[posi];
 }
+
+
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
