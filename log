@@ -505,3 +505,23 @@ hashmap.c:106:24: error: 'capacity' undeclared (first use in this function)
                         ^~~~~~~~
 hashmap.c:106:24: note: each undeclared identifier is reported only once for each function it appears in
 4f93e21
+Fri, Apr 18, 2025 10:29:42 PM: 
+ hashmap.c | 13 ++++++++-----
+ 1 file changed, 8 insertions(+), 5 deletions(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'firstMap':
+hashmap.c:107:42: error: expected expression before ')' token
+     while(map->current < map->capacity &&)
+                                          ^
+hashmap.c:108:23: error: statement with no effect [-Werror=unused-value]
+          (map->buckets[map->current] == NULL || map->buckets[map->current]->key == NULL){
+          ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+hashmap.c:108:89: error: expected ';' before '{' token
+          (map->buckets[map->current] == NULL || map->buckets[map->current]->key == NULL){
+                                                                                         ^
+hashmap.c:118:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+280d335

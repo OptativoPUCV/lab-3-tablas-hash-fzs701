@@ -103,14 +103,17 @@ void eraseMap(HashMap * map,  char * key) {
 
 }
 Pair * firstMap(HashMap * map) {
-    for(int i = 0; i < capacity; i++){
-        if(map->buckets[i] != NULL && map->buckets[i]->key != NULL){
-            map->current = i;
-            return map->buckets[i];
-        }
+    map->current = 0;
+    while(map->current < map->capacity &&)
+         (map->buckets[map->current] == NULL || map->buckets[map->current]->key == NULL){
+            map->current++;
     }
-        
-    return NULL;
+    
+    if(map->current < map->capacity){
+        return map->buckets[map->current];
+    } else {
+        return NULL;
+    }
     
 }
 
