@@ -260,3 +260,9 @@ hashmap.c:78:28: error: subscripted value is neither array nor pointer nor vecto
          return map->current[posi];
                             ^
 a9dad20
+Fri, Apr 18, 2025  9:52:29 PM: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  6|4
+total_score: 30/70
+9a707b3
