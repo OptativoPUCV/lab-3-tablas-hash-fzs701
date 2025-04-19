@@ -132,7 +132,19 @@ Pair * nextMap(HashMap * map) {
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
+    Pair ** antiguo = map->buckets;
+    long capacidadAnti = map->capacity;
+    map->capacity*2;
 
+    map->buckets = (Pair **)calloc(sizeof(Pair) * capacity);
+    map->size = 0;
+    map->current = -1;
+    for(int i = 0; i < capacidadAnti; i++){
+        if(antiguo[i] != NULL && antiguo[i]->buckets != NULL){
+            insertMap(map, antiguo[i]->key,antiguo[i]->buckets);
+        }
+    }
+    free(antiguo);
 
 }
 

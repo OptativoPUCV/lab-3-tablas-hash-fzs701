@@ -553,3 +553,32 @@ Fri, Apr 18, 2025 10:36:08 PM:
  tests:  16|1
 total_score: 60/70
 2e228b6
+Fri, Apr 18, 2025 10:44:37 PM: 
+ hashmap.c | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'enlarge':
+hashmap.c:137:18: error: statement with no effect [-Werror=unused-value]
+     map->capacity*2;
+     ~~~~~~~~~~~~~^~
+hashmap.c:139:51: error: 'capacity' undeclared (first use in this function)
+     map->buckets = (Pair **)calloc(sizeof(Pair) * capacity);
+                                                   ^~~~~~~~
+hashmap.c:139:51: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:139:29: error: too few arguments to function 'calloc'
+     map->buckets = (Pair **)calloc(sizeof(Pair) * capacity);
+                             ^~~~~~
+In file included from test.c:2:0:
+c:\mingw\include\stdlib.h:484:40: note: declared here
+ _CRTIMP __cdecl __MINGW_NOTHROW  void *calloc (size_t, size_t) __MINGW_ATTRIB_MALLOC;
+                                        ^~~~~~
+In file included from test.c:4:0:
+hashmap.c:143:44: error: 'Pair {aka struct Pair}' has no member named 'buckets'
+         if(antiguo[i] != NULL && antiguo[i]->buckets != NULL){
+                                            ^~
+hashmap.c:144:54: error: 'Pair {aka struct Pair}' has no member named 'buckets'
+             insertMap(map, antiguo[i]->key,antiguo[i]->buckets);
+                                                      ^~
+cc1.exe: all warnings being treated as errors
+a7b2e8f
