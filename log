@@ -327,3 +327,9 @@ hashmap.c:91:10: error: unused variable 'comprobar' [-Werror=unused-variable]
           ^~~~~~~~~
 cc1.exe: all warnings being treated as errors
 4e5876a
+Fri, Apr 18, 2025 10:01:54 PM: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  8|3
+total_score: 40/70
+a1b8a88
