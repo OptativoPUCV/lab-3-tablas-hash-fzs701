@@ -90,7 +90,7 @@ void eraseMap(HashMap * map,  char * key) {
     long posi = hash(key,map->capacity);
     long comprobar = posi;
     while(map->buckets[posi] != NULL){
-        if(map->buckets[posi]->key, key && is_equal(map->buckets[posi]->key,key)){
+        if(map->buckets[posi]->key != NULL && key && is_equal(map->buckets[posi]->key,key)){
             map->current = posi;
 
         }
