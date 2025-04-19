@@ -31,3 +31,23 @@ Fri, Apr 18, 2025  9:15:09 PM:
  tests:  0|6
 total_score: 0/70
 c309bd9
+Fri, Apr 18, 2025  9:18:58 PM: 
+ hashmap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'createMap':
+hashmap.c:44:5: error: statement with no effect [-Werror=unused-value]
+     newMap size = 0;
+     ^~~~~~
+hashmap.c:44:12: error: expected ';' before 'size'
+     newMap size = 0;
+            ^~~~
+hashmap.c:46:5: error: expected ';' before 'return'
+     return NULL;
+     ^~~~~~
+hashmap.c:47:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+74f4d01
