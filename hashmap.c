@@ -86,6 +86,17 @@ Pair * searchMap(HashMap * map,  char * key) {
 
     return NULL;
 }
+void eraseMap(HashMap * map,  char * key) {    
+    long posi = hash(key,map->capacity);
+    long comprobar = posi;
+    while(map->buckets[posi] != NULL){
+        if(map->buckets[posi]->key, key && is_equal(map->buckets[posi]->key,key)){
+            map->current = posi;
+
+        }
+    }
+
+}
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
@@ -99,10 +110,10 @@ void enlarge(HashMap * map) {
     return NULL;
 }*/
 
-void eraseMap(HashMap * map,  char * key) {    
+/*void eraseMap(HashMap * map,  char * key) {    
 
 
-}
+}*/
 
 /*Pair * searchMap(HashMap * map,  char * key) {   
 
