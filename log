@@ -377,3 +377,14 @@ Fri, Apr 18, 2025 10:03:53 PM:
  tests:  8|3
 total_score: 40/70
 8afa618
+Fri, Apr 18, 2025 10:04:38 PM: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'eraseMap':
+hashmap.c:94:32: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+             map->buckets[posi] = posi;
+                                ^
+cc1.exe: all warnings being treated as errors
+d7c8f68
