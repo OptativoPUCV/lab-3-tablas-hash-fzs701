@@ -85,3 +85,9 @@ hashmap.c:44:12: error: expected ';' before 'size'
             ^~~~
 cc1.exe: all warnings being treated as errors
 8a069fa
+Fri, Apr 18, 2025  9:19:54 PM: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|6
+total_score: 0/70
+ed30424
