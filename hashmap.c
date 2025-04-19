@@ -43,7 +43,7 @@ HashMap * createMap(long capacity) {
     newMap->buckets = (Pair **)malloc(sizeof(Pair));
     newMap size = 0;
     newMap->current = -1
-    return NULL;
+    return newMap;
 }
 
 void insertMap(HashMap * map, char * key, void * value) {
