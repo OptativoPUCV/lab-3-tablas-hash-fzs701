@@ -147,8 +147,8 @@ Pair * nextMap(HashMap * map) {
             return NULL;
         }
     }
-    map->current = pos;
-    return map->buckets[pos];
+    map->current = posi;
+    return map->buckets[posi];
 }
 
 void enlarge(HashMap * map) {
