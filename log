@@ -359,3 +359,15 @@ hashmap.c:89:6: note: declared here
       ^~~~~~~~
 cc1.exe: all warnings being treated as errors
 e86accb
+Fri, Apr 18, 2025 10:03:32 PM: 
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'eraseMap':
+hashmap.c:96:20: error: 'return' with a value, in function returning void [-Werror]
+             return NULL;
+                    ^~~~
+hashmap.c:89:6: note: declared here
+ void eraseMap(HashMap * map,  char * key) {
+      ^~~~~~~~
+cc1.exe: all warnings being treated as errors
+452e959
