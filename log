@@ -582,3 +582,9 @@ hashmap.c:144:54: error: 'Pair {aka struct Pair}' has no member named 'buckets'
                                                       ^~
 cc1.exe: all warnings being treated as errors
 a7b2e8f
+Fri, Apr 18, 2025 10:46:34 PM: 
+ hashmap.c | 11 +++++++----
+ 1 file changed, 7 insertions(+), 4 deletions(-)
+ tests:  17|0
+total_score: 70/70
+3803222
