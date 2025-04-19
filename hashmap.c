@@ -72,7 +72,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 }
 Pair * searchMap(HashMap * map,  char * key) {   
     long posi = hash(key,map->capacity);
-    long comprobar = posi;
+    //long comprobar = posi;
     if(map->buckets[posi]->key != NULL){
         posi = (posi + 1) % map->capacity;
         
