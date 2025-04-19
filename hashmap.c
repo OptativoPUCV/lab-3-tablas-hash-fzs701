@@ -45,6 +45,7 @@ HashMap * createMap(long capacity) {
         newMap->buckets[i] = NULL;
     }
     newMap->size = 0;
+    newMap->capacity = capacity;
     newMap->current = -1;
     return newMap;
 }
