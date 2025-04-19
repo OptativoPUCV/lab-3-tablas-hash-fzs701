@@ -313,3 +313,17 @@ Fri, Apr 18, 2025 10:00:49 PM:
  tests:  8|3
 total_score: 40/70
 50cbb95
+Fri, Apr 18, 2025 10:01:42 PM: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'eraseMap':
+hashmap.c:98:9: error: expected ';' before 'if'
+         if(posi == comprobar){
+         ^~
+hashmap.c:91:10: error: unused variable 'comprobar' [-Werror=unused-variable]
+     long comprobar = posi;
+          ^~~~~~~~~
+cc1.exe: all warnings being treated as errors
+4e5876a
