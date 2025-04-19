@@ -142,7 +142,7 @@ Pair * nextMap(HashMap * map) {
     long comprobar = posi;
 
     while(map->buckets[posi] == NULL || map->buckets[posi]->key == NULL){
-        posi = (posi + 1) % map->capacity
+        posi = (posi + 1) % map->capacity;
         if(posi == comprobar) {
             return NULL;
         }
