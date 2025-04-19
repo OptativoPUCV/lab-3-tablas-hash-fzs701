@@ -97,7 +97,7 @@ void eraseMap(HashMap * map,  char * key) {
         }
         posi = (posi + 1) % map->capacity;
         if(posi == comprobar){
-            return;
+            break;
         }
     }
 
