@@ -25,3 +25,9 @@ hashmap.c:43:11: error: 'HashMap {aka struct HashMap}' has no member named 'key'
      newMap->key;
            ^~
 a5b2d79
+Fri, Apr 18, 2025  9:15:09 PM: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|6
+total_score: 0/70
+c309bd9
