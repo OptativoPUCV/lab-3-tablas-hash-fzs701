@@ -266,3 +266,13 @@ Fri, Apr 18, 2025  9:52:29 PM:
  tests:  6|4
 total_score: 30/70
 9a707b3
+Fri, Apr 18, 2025  9:53:27 PM: 
+ hashmap.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'searchMap':
+hashmap.c:82:9: error: break statement not within loop or switch
+         break;
+         ^~~~~
+f49d4a8
