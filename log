@@ -471,3 +471,20 @@ hashmap.c:108:79: note: ...this statement, but the latter is misleadingly indent
                                                                                ^
 cc1.exe: all warnings being treated as errors
 b66f71f
+Fri, Apr 18, 2025 10:21:43 PM: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'firstMap':
+hashmap.c:108:78: error: expected statement before ')' token
+         if(map->buckets[primer] == NULL && map->buckets[primer]->key == NULL)){
+                                                                              ^
+hashmap.c:108:9: error: this 'if' clause does not guard... [-Werror=misleading-indentation]
+         if(map->buckets[primer] == NULL && map->buckets[primer]->key == NULL)){
+         ^~
+hashmap.c:108:79: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the 'if'
+         if(map->buckets[primer] == NULL && map->buckets[primer]->key == NULL)){
+                                                                               ^
+cc1.exe: all warnings being treated as errors
+8c8d019
