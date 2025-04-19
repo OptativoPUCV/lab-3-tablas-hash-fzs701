@@ -184,3 +184,13 @@ hashmap.c:73:8: note: declared here
         ^~~~~~~~~
 cc1.exe: all warnings being treated as errors
 a622ed2
+Fri, Apr 18, 2025  9:46:57 PM: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'searchMap':
+hashmap.c:79:13: error: break statement not within loop or switch
+             break;
+             ^~~~~
+2989134
