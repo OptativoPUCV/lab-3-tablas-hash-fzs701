@@ -53,55 +53,61 @@ HashMap * createMap(long capacity) {
 void insertMap(HashMap * map, char * key, void * value) {
     long posi = hash(key,map->capacity);
     long comprobar = posi;
+
     while(map->buckets[posi] != NULL && map->buckets[posi]->key != NULL){
         if(is_equal(map->buckets[posi]->key,key)){
             return;
         }
         posi = (posi + 1) % map->capacity;
+
         if(posi == comprobar){
             return;
         }
 
     }
+
     Pair * newPair = createPair(key,value);
     map->buckets[posi] = newPair;
     map->current = posi;
     map->size++;
-    
-
 }
+
 Pair * searchMap(HashMap * map,  char * key) {   
     long posi = hash(key,map->capacity);
     long comprobar = posi;
+
     while(map->buckets[posi] != NULL){
         if(map->buckets[posi]->key != NULL && is_equal(map->buckets[posi]->key,key)){
             map->current = posi;
             return map->buckets[posi];
         }
+
         posi = (posi + 1) % map->capacity;
         if(posi == comprobar){
             break;
         }
     }
-
     return NULL;
 }
+
 void eraseMap(HashMap * map,  char * key) {    
     long posi = hash(key,map->capacity);
     long comprobar = posi;
+
     while(map->buckets[posi] != NULL){
-        if(map->buckets[posi]->key != NULL && key && is_equal(map->buckets[posi]->key,key)){
+        if(map->buckets[posi]->key != NULL && is_equal(map->buckets[posi]->key,key)){
             map->buckets[posi]->key = NULL;
             map->size--;
             return;
         }
+
         posi = (posi + 1) % map->capacity;
         if(posi == comprobar){
             break;
         }
     }
-
 }
+
 Pair * firstMap(HashMap * map) {
     map->current = 0;
     while((map->current < map->capacity) &&
@@ -117,8 +123,9 @@ Pair * firstMap(HashMap * map) {
     
 }
 
-Pair * nextMap(HashMap * map) {
+/*Pair * nextMap(HashMap * map) {
     long primer = map->current + 1;
+
     while(primer < map->capacity){
         if(map->buckets[primer] != NULL && map->buckets[primer]->key != NULL){
             map->current = primer;
@@ -128,6 +135,20 @@ Pair * nextMap(HashMap * map) {
     }
     
     return NULL;
+}*/
+
+Pair * nextMap(HashMap * map) {
+    long posi = (map->current + 1) % map->capacity;
+    long comprobar = posi;
+
+    while(map->buckets[posi] == NULL || map->buckets[posi]->key == NULL){
+        posi = (posi + 1) % map->capacity
+        if(posi == comprobar) {
+            return NULL;
+        }
+    }
+    map->current = pos;
+    return map->buckets[pos];
 }
 
 void enlarge(HashMap * map) {
@@ -150,6 +171,13 @@ void enlarge(HashMap * map) {
     free(antiguo);
 
 }
+
+
+
+
+
+
+
 
 
 /*HashMap * createMap(long capacity) {
