@@ -296,3 +296,14 @@ hashmap.c:91:10: error: unused variable 'comprobar' [-Werror=unused-variable]
           ^~~~~~~~~
 cc1.exe: all warnings being treated as errors
 da8a530
+Fri, Apr 18, 2025 10:00:26 PM: 
+ hashmap.c | 3 +++
+ 1 file changed, 3 insertions(+)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'eraseMap':
+hashmap.c:93:35: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+         if(map->buckets[posi]->key, key && is_equal(map->buckets[posi]->key,key)){
+                                   ^
+cc1.exe: all warnings being treated as errors
+dcabcb8

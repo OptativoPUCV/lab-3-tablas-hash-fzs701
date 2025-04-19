@@ -94,6 +94,9 @@ void eraseMap(HashMap * map,  char * key) {
             map->current = posi;
 
         }
+        if(posi == comprobar){
+            return;
+        }
     }
 
 }
