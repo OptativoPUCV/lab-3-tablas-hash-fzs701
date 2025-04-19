@@ -102,6 +102,18 @@ void eraseMap(HashMap * map,  char * key) {
     }
 
 }
+Pair * firstMap(HashMap * map) {
+    map->current = 0;
+    while(map->current < map->capacity){
+        map->current++;
+    }
+    return NULL;
+}
+
+Pair * nextMap(HashMap * map) {
+
+    return NULL;
+}
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
@@ -126,7 +138,7 @@ void enlarge(HashMap * map) {
     return NULL;
 }*/
 
-Pair * firstMap(HashMap * map) {
+/*Pair * firstMap(HashMap * map) {
 
     return NULL;
 }
@@ -134,4 +146,4 @@ Pair * firstMap(HashMap * map) {
 Pair * nextMap(HashMap * map) {
 
     return NULL;
-}
+}*/
